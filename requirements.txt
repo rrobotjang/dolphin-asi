@@ -1,0 +1,19 @@
+# Web & UI (Gradio 6 matches your code syntax)
+gradio==6.2.0
+fastapi==0.115.2
+uvicorn==0.32.0
+
+# AI & Computer Vision (Synchronized Versions)
+torch==2.9.1
+torchvision==0.24.1
+opencv-python-headless==4.10.0.84
+
+# Data & Logic
+numpy==2.2.1
+pandas==2.2.3
+pydantic==2.9.2
+
+# Audio Fixes
+audioop-lts==0.2.2; python_version >= "3.13"
+pydub==0.25.1
+PyAudio==0.2.14

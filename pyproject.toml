@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dolphin-asi"
+version = "0.1.0"
+authors = [
+  { name="Robot Jang", email="your-email@example.com" },
+]
+description = "A Global Intelligence Grid and ASI visualization system based on Renormalization Group theory."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch",
+    "numpy",
+    "opencv-python",
+    "gradio",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/robotjang/dolphin-asi"
+"Bug Tracker" = "https://github.com/robotjang/dolphin-asi/issues"
+
+[project.scripts]
+dolphin-asi = "dolphin_asi.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

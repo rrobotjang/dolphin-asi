@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  
+    # If the user has a GPU (Linux/WSL2), they can uncomment the following:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  gradio-app:
+    build: .
+    volumes:
+      - .:/app          # Syncs your local code with the container
+    ports:
+      - "7860:7860"     # Web UI port
+    command: gradio gradio_app.py  # Enables Gradio Hot Reload
+    environment:
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - WATCHPACK_POLLING=true    # Helps Docker detect changes on Windows/WSL
